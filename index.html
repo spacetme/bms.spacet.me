@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bms.main">
+<head>
+  <meta charset="UTF-8">
+  <title>BEAT&#x2606;MUSIC&#x2606;SEQUENCE</title>
+  <link rel="stylesheet" href="assets/css/style-82e7a717.css" media="all">
+  <link rel="stylesheet" href="assets/font/ComputerModernSerif/cmun-serif.css" media="all">
+  <link rel="stylesheet" href="assets/font/ComputerModernTypewriter/cmun-typewriter.css" media="all">
+  <meta name="viewport" content="width=800; user-scalable=0">
+</head>
+<body>
+  <div class="main-view" ng-controller="BMSMainController">
+    <h1>B<small>EAT</small>&#x2606;M<small>USIC</small>&#x2606;S<small>EQUENCE</small></h1>
+    <p class="about-p">
+      BEAT&#x2606;MUSIC&#x2606;SEQUENCE is the first open-source web-based rhythm game<br>
+      built using HTML5 technologies. <a href="#">about &rightarrow;</a>
+    </p>
+    <div class="tabs">
+      <a href="#/" ng-class="{ active: route.name == 'play' }">Play</a>
+      <a href="#/about" ng-class="{ active: route.name == 'about' }">About</a>
+    </div>
+    <div class="tab-contents">
+      <div class="ipad-tips padding" ng-show="route.name == 'play'">
+        <p>iPad users: For best experience, please do the following:</p>
+        <ul>
+          <li>Turn off “assistive touch” and “multitasking gestures.”
+          <li>Set your screen orientation to “portrait.”
+        </ul>
+      </div>
+      <div ng-view></div>
+    </div>
+    <div class="footer">
+      <strong>BEAT&#x2606;MUSIC&#x2606;SEQUENCE</strong> &copy; 2013-2014 <a href="http://spacet.me/">Spacet.me Labs</a><br>
+      <em>This game is open source.</em> <a href="https://github.com/spacetme/bms">Fork me on GitHub</a>
+    </div>
+  </div>
+
+  <script type="text/ng-template" id="angular/partials/main.html">
+    <div id="select-collection">
+      <h2 class="padding">Select Collection</h2>
+      <div ng-show="loading" class="loading">
+        Loading collection list...
+      </div>
+      <div ng-show="error" class="error">
+        <strong>Error!</strong> Unable to load collection list.
+        <pre>{{error | json}}</pre>
+      </div>
+      <div class="padding">
+        <h3>Play Online</h3>
+        <ul>
+          <li ng-repeat="collection in collections">
+            <a href="{{collectionURL(collection.url)}}" ng-bind="collection.name"></a>
+          </li>
+        </ul>
+        <h3>Advanced</h3>
+        <ul>
+          <li>
+            <em><a href="{{collectionURL('http://localhost:1358')}}">localhost Collection</a></em>
+          </li>
+          <li>
+            <em><a href="javascript://" ng-click="manual()">Manually enter collection URL</a></em>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="angular/partials/select-music.html">
+    <div id="select-music">
+      <h2 class="padding">Select Music</h2>
+      <div ng-show="loading" class="loading">
+        Loading collection list...
+      </div>
+      <div ng-show="error" class="error">
+        <strong>Error!</strong> Unable to load collection list.
+        <pre>{{error | json}}</pre>
+      </div>
+      <ul>
+        <li ng-repeat="sub in collection.subcollections">
+          <a href="{{subcollectionURL(sub.path)}}">{{ sub.path }}</a>
+        </li>
+      </ul>
+      <table class="game-table">
+        <thead>
+          <tr>
+            <th>Title / Genre</th>
+            <th>Artist</th>
+            <th>Difficulty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="music in collection.music">
+            <td class="music-row" onclick="location.href=this.getElementsByTagName('a')[0]"><a ng-bind="music.title" class="song-title"
+              href="{{musicURL(music)}}"></a> <em ng-bind="music.genre" class="genre"></em></td>
+            <td ng-bind="music.artist"></td>
+            <td class="levels">
+              <span class="level" ng-bind="pattern.level" ng-repeat="pattern in music.levels"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="angular/partials/music.html">
+    <div id="music">
+      <h2 class="padding">{{music.title}} <small>&mdash; {{music.artist}}</small> <span class="genre">{{music.genre}}</span></h2>
+      <div ng-show="loading" class="loading">
+        Loading collection information...
+      </div>
+      <div ng-show="error" class="error">
+        <strong>Error!</strong> Unable to load collection information.
+        <pre>{{error | json}}</pre>
+      </div>
+      <div ng-show="!loading && !music" class="error">
+        <strong>Error!</strong> Music not found.
+      </div>
+      <div ng-if="music">
+        <table class="game-table">
+          <thead>
+            <tr>
+              <th>Level File</th>
+              <th>Difficulty</th>
+              <th>Level</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="pattern in music.levels">
+              <td ng-bind="pattern.bms"></td>
+              <td ng-bind="pattern.difficulty"></td>
+              <td ng-bind="pattern.level"></td>
+              <td align="center"><a href="game.html" ng-click="play(pattern)">Play Now</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 class="music-description padding">Description</h3>
+        <div class="description padding" ng-bind-html="marked(music.description)"></div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="angular/partials/about.html">
+    <div id="about" class="padding">
+      <p>BEAT&#x2606;MUSIC&#x2606;SEQUENCE is the first open-source web-based rhythm game
+      built using HTML5 technologies—an evidence that HTML5 is ready for music games.</p>
+      <p>This game is tested on:</p>
+      <ul>
+        <li>Google Chrome on Mac OS X</li>
+        <li>MobileSafari on iPad with iOS 7</li>
+      </ul>
+    </div>
+  </script>
+
+  <script src="assets/js/home-bbd41ebd.js"></script>
+
+</body>
+</html>

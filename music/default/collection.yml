@@ -1,0 +1,99 @@
+---
+name: Default Collection
+description: |
+  The default music collection in BEAT☆MUSIC☆SEQUENCE.
+music:
+  - title: BY☆MY☆SIDE (Tutorial)
+    artist: iaht
+    id: by_my_side_tutorial
+    genre: Trance Core
+    path: by-my-side
+    description: |
+      __This is the tutorial.__
+      Play this song first if you have never played this game before.
+
+      * [SoundCloud](https://soundcloud.com/o_ooooo/by-my-side)
+    level:
+      7ES20: "ByMySide-TUTORIAL.bms"
+  - title: Sawasdee New Year
+    artist: iaht
+    genre: Cyber Quick Waltz
+    id: sawasdee_new_year
+    path: sawasdee-new-year
+    description: |
+      From [SoundCloud](http://soundcloud.com/iceloki):
+
+      > Based on song "Sawasdee Pee Mai (สวัสดีปีใหม่)" by Suntaraporn (สุนทราภรณ์),
+      > a song about new year, by Thailand's most well-known big band.
+      >
+      > Inspirations and Influences:
+      > 
+      > * I heard that song many times everywhere during the new year season and like it
+      > * encX - Sawasdee (for remixing a thai traditional tune and inspiration for song title
+      > * Tatsh - reunion (for the genre "cyber waltz" and a speedy waltz song)
+      > * ...and many other songs from various music games have also influences several parts of this song
+      >
+      > HAPPY NEW YEAR 2013
+    links:
+      soundcloud: 
+    level:
+      7NM18: "sawasdee-new-year-normal.bms"
+  - title: L
+    artist: Ice
+    id: iceloki_l
+    genre: RENAISSANCE PRAYER
+    path: iceloki-l
+    description: |
+      This song comes from [BOF2012](http://www.bmsoffighters.net/bof2012/).
+      [Used with permission](https://twitter.com/ice_loki/status/414669622609059841).
+
+      > 【一言】
+      >
+      > はじめまして。香港のIce（ロキ）と申します。
+      > 台湾チーム「Prismatic Music」の一員として今回のイベントを参加させていただきます。
+      >
+      > この度、Lを聴いてくださってありがとうございます。
+      >
+      > Lの意味は、Lost（失う）、Loneliness（孤独）、Liberation（解放）の３つです。
+      > 曲作ってる途中には、自分のネーム、ロキ（Loki）だけにするつもりだったのですが、
+      > 徐々に物語が頭から浮かんできて、いままで作っていた曲をあわせたらいい感じになりそうと思います。
+      >
+      > 少しネタバレ的な感じですが、
+      > Precipitation at the Entranceの次に、主人公の思いを描写する曲です。
+      >
+      > 向かっているのは、光が満ちている解放の道なのか、暗闇に吸い込まれている混沌の道なのか。
+      > その結果は、ロングバージョンにで、明らかになりますので、是非楽しみにしてください。
+      >
+      > 少し制作過程についての話ですが、
+      > この曲は、最初からロングバージョンが出てきました。
+      > それを短くするには結構かかりました。
+      >
+      > この場で、
+      > BOF2012に参加しようと提案した、Prismatic Music副主催の3R2氏、
+      > 譜面制作協力のXEIR氏、
+      > BGA制作のnazek.氏、
+      > Prismatic Musicチームのみんな、
+      > そして、これを遊んでくださった皆さんに、感謝します。
+      >
+      > 今後もよろしくお願い致します。
+      >
+      > Ice（ロキ）
+      > Prismatic Music
+      > Twitter: @ice_loki
+      > Soundcloud: http://soundcloud.com/iceloki
+    level:
+      7ES8: "L_[SPN].bms"
+      7NM16: "L_[BMS-NM].bms"
+      7HD24: "L_[SPH](XEIR).bme"
+      7EX50: "L_[SP-Lokinother].bms"
+  - title: BY☆MY☆SIDE
+    artist: iaht
+    id: by_my_side
+    genre: Trance Core
+    path: by-my-side
+    description: |
+      Tutorial song for the game BEAT☆MUSIC☆SEQUENCE.
+
+      * [SoundCloud](https://soundcloud.com/o_ooooo/by-my-side)
+    level:
+      7HD28: "ByMySide-HARD.bms"
