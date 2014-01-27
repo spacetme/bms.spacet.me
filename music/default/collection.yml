@@ -14,7 +14,7 @@ music:
 
       * [SoundCloud](https://soundcloud.com/o_ooooo/by-my-side)
     level:
-      7ES20: "ByMySide-TUTORIAL.bms"
+      7ES10: "ByMySide-TUTORIAL.bms"
   - title: Sawasdee New Year
     artist: iaht
     genre: Cyber Quick Waltz
@@ -37,9 +37,10 @@ music:
     links:
       soundcloud: 
     level:
-      7NM18: "sawasdee-new-year-normal.bms"
+      7NM9: "sawasdee-new-year-normal.bms"
   - title: L
     artist: Ice
+    artist_url: https://soundcloud.com/iceloki
     id: iceloki_l
     genre: RENAISSANCE PRAYER
     path: iceloki-l
@@ -82,10 +83,28 @@ music:
       > Twitter: @ice_loki
       > Soundcloud: http://soundcloud.com/iceloki
     level:
-      7ES8: "L_[SPN].bms"
-      7NM16: "L_[BMS-NM].bms"
-      7HD24: "L_[SPH](XEIR).bme"
-      7EX50: "L_[SP-Lokinother].bms"
+      7ES7: "L_[SPN].bms"
+      7NM10: "L_[BMS-NM].bms"
+      7HD11: "L_[SPH](XEIR).bme"
+      7EX20: "L_[SP-Lokinother].bms"
+  - title: Caelumize
+    artist: void
+    artist_url: http://mournfinale.com/
+    id: void_caelumize
+    genre: Filmscore / Neurocore
+    path: void-caelumize
+    description: |
+      This song comes from [BOF2013](http://bmsoffighters.net/bof2013/).
+      Used with permission.
+
+      > 一度くらい早いヨツウチを自分なりの解釈で作ってみたかったんです。
+      > 凝るところは凝りつつ、ゴリ押すところはひたすらゴリ押しです。
+      > 必死でした。
+    level:
+      7ES3: "_01spb.bml"
+      7NM6: "_02spn.bml"
+      7HD9: "_03sph.bml"
+      7EX11: "_04spa.bml"
   - title: BY☆MY☆SIDE
     artist: iaht
     id: by_my_side
@@ -96,4 +115,4 @@ music:
 
       * [SoundCloud](https://soundcloud.com/o_ooooo/by-my-side)
     level:
-      7HD28: "ByMySide-HARD.bms"
+      7HD11: "ByMySide-HARD.bms"
