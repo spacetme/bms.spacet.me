@@ -101,10 +101,10 @@ music:
       > 凝るところは凝りつつ、ゴリ押すところはひたすらゴリ押しです。
       > 必死でした。
     level:
-      7ES3: "_01spb.bml"
-      7NM6: "_02spn.bml"
-      7HD9: "_03sph.bml"
-      7EX11: "_04spa.bml"
+      7ES3: "01spb.bml"
+      7NM6: "02spn.bml"
+      7HD9: "03sph.bml"
+      7EX11: "04spa.bml"
   - title: BY☆MY☆SIDE
     artist: iaht
     id: by_my_side
